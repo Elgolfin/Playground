@@ -23,10 +23,10 @@ module.exports = {
       .waitForElementVisible('body', 1000)
       .waitForElementVisible('div.ic-username', 1000)
       .setValue('input[name=username]', username1)
-      .setValue('input[name=password]', 'Test123!')
+      .setValue('input[name=password]', 'hahaha123!')
 	  .click('input[value=\'SIGN IN\']')
-      .pause(1000)
-      //.assert.containsText('body', 'Night Watch')
+      .waitForElementPresent('[data-qa="username"]', 5000)
+	  .assert.containsText('[data-qa="username"]', 'FIRSTNAME NAME')
       .end();
   }
   //*/

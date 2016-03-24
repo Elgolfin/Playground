@@ -17,12 +17,12 @@ module.exports = {
     browser.end();
   }
   //*/
-  /*'Demo test Orckestra Price Lists 2' : function (browser) {
+  ,'Demo test Orckestra Price Lists Login' : function (browser) {
     browser
       .url('https://sc-popcellar-oco-int2.overture.orckestra.local/cm/app/global/priceManagement/priceLists')
       .waitForElementVisible('body', 1000)
       .waitForElementVisible('div.ic-username', 1000)
-      .setValue('input[name=username]', username2)
+      .setValue('input[name=username]', username1)
       .setValue('input[name=password]', 'Test123!')
 	  .click('input[value=\'SIGN IN\']')
       .pause(1000)

@@ -11,3 +11,7 @@ npm list -g --depth 0
 ```
 node --version
 ```
+
+## Useful links
+
+http://stackoverflow.com/questions/18875674/whats-the-difference-between-dependencies-devdependencies-and-peerdependencies

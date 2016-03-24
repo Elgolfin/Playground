@@ -1,6 +1,8 @@
 # Useful Link
 
-https://github.com/nightwatchjs/nightwatch/wiki/Windows-Quick-Start
+- https://github.com/nightwatchjs/nightwatch/wiki/Windows-Quick-Start
+- https://github.com/nightwatchjs/nightwatch/wiki/Chrome-Setup
+- https://github.com/nightwatchjs/nightwatch/wiki/Internet-Explorer-Setup
 
 # Installation
 

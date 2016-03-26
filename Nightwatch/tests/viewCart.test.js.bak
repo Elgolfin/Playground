@@ -1,0 +1,15 @@
+"use strict"
+module.exports = {
+  ///*
+  'Better Retail Search' : function (browser) {
+	let checkout = browser.page.checkout();
+    browser.deleteCookies();
+    checkout.navigate()
+		.waitForElementVisible('body', 1000)
+		.waitForElementVisible('@searchBox', 1000)
+		.setValue('@searchBox', "shirt")
+		.click('@btnSearchSubmit')
+		//.assert.containsText('@searchResultCount', '3042');
+    browser.end();
+  }
+};

@@ -1,7 +1,7 @@
 'use strict';
 
 let miniCartCommands = {
-    viewFullCart: function(searchTerm) {
+    viewFullCart: function() {
         return this.waitForElementVisible('@miniCartButton', 1000)
             .click('@miniCartButton');
     },

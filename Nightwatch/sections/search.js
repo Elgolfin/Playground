@@ -6,6 +6,10 @@ let searchCommands = {
             .setValue('@searchInput', searchTerm)
             .click('@searchSubmit');
     },
+    goToProduct: function (index) {
+        index = index || 1;
+        return this.click('[data-qa=search-results]:nth-of-type(' + index + ') [data-qa=search-product-title]');
+    },
     variables: function() {
         return {
             oneKeywordTerm: "shirt",

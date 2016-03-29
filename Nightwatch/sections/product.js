@@ -6,7 +6,7 @@ let productCommands = {
     },
     addToCart: function(delay) {
         delay = delay || 1000;
-        return this.waitForElementVisible('@addToCartButton', 1000)
+        return this.waitForElementVisible('@addToCartButton', 2000)
             .click('@addToCartButton')
             .waitForElementPresent('@addToCartDisabled', 100)
             .waitForElementPresent('@addToCartDone', delay); 

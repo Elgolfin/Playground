@@ -2,7 +2,7 @@
 
 let searchCommands = {
     submit: function(searchTerm) {
-        return this.waitForElementPresent('@searchInput', 1000)
+        return this.waitForElementPresent('@searchInput', 2000)
             .setValue('@searchInput', searchTerm)
             .click('@searchSubmit');
     },

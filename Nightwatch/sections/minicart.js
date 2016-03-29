@@ -2,7 +2,7 @@
 
 let miniCartCommands = {
     viewFullCart: function() {
-        return this.waitForElementVisible('@miniCartButton', 1000)
+        return this.waitForElementVisible('@miniCartButton', 2000)
             .click('@miniCartButton');
     },
     getItemsCount: function () {

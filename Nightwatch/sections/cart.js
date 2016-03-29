@@ -2,7 +2,7 @@
 
 let cartCommands = {
     checkout: function() {
-        return this.waitForElementVisible('@checkoutButton', 1000)
+        return this.waitForElementVisible('@checkoutButton', 2000)
             .click('@checkoutButton');
     },
     getItemsCount: function () {

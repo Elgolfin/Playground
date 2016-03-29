@@ -1,11 +1,17 @@
 ﻿[cmdletbinding()]
 param([string[]]$To)
 
+$username = "firstname.lastname"
+$domain = "domain"
 
-cd C:\Users\me\Documents\Repositories\Playground\Nightwatch\
+$email = $username + '@' + $domain + '.com'
+$path = 'C:\Users\' + $username + '\Documents\Repositories\Playground\Nightwatch\'
+$smtp = 'smtp.' + $domain + '.local' 
+
+cd $path
 try {
 	node nightwatch.js -e chrome
 } catch {
 	
 }
-Send-MailMessage -From me@yopmail.com -To $to -Attachments .\reports\CHROME_49.0.2623.87_XP_checkout.test.xml -Subject 'Nightwatch.js Results' -Body 'See attachments.' -SmtpServer 'smtp.mydomain.local'
+Send-MailMessage -From $email -To $to -Attachments .\reports\CHROME_49.0.2623.87_XP_checkout.test.xml -Subject 'Nightwatch.js Results' -Body 'See attachments.' -SmtpServer $smtp

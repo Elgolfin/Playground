@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 using Pets;
-public class PetTests
+public class PetsTests
 {
     [Fact]
     public void DogTalkToOwnerTest()

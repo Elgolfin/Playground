@@ -78,6 +78,7 @@ describe('Test', () => {
       chai.request(server)
       .get('/status/400')
       .end(function (err, res) {
+        if (err) {}
         expect(res).to.have.status(400)
         done()
       })

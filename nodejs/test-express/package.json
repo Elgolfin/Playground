@@ -14,6 +14,14 @@
     "build": "babel src -d dist --presets es2015,stage-2",
     "serve": "npm run build && npm run startdev"
   },
+  "pre-commit": {
+    "silent": false,
+    "run": [
+      "lint",
+      "test"
+    ],
+    "colors": true
+  },
   "dependencies": {
     "auth0-js": "^8.1.3",
     "axios": "^0.15.3",
@@ -38,11 +46,11 @@
     "eslint-config-standard": "^6.2.1",
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^2.0.1",
-    "isparta": "^4.0.0",
     "istanbul": "^1.1.0-alpha.1",
     "istanbul-reporter-shield-badge": "^1.1.3",
     "mocha": "^3.2.0",
     "opn": "^4.0.2",
+    "pre-commit": "^1.2.2",
     "sinon": "^1.17.7",
     "sinon-chai": "^2.8.0",
     "sinon-stub-promise": "^4.0.0"

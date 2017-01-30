@@ -9,7 +9,7 @@
     "restart": "pm2 restart test-express",
     "stop": "pm2 delete test-express",
     "lint": "eslint --ext .js, src test/unit/specs",
-    "test": "pm2 kill && istanbul cover node_modules/mocha/bin/_mocha test/unit/specs -- --compilers js:babel-register",
+    "test": "pm2 kill && istanbul cover --report lcov --report json --report text --report cobertura node_modules/mocha/bin/_mocha test/unit/specs -- --compilers js:babel-register",
     "testwatch": "mocha test/unit/specs --compilers js:babel-register -w",
     "build": "babel src -d dist --presets es2015,stage-2",
     "serve": "npm run build && npm run startdev"

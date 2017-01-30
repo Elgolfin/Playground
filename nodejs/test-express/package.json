@@ -1,13 +1,13 @@
 {
-  "name": "test-cookies",
+  "name": "test-express",
   "version": "1.0.0",
   "description": "Sample node project to play with cookies",
   "scripts": {
-    "start": "pm2 kill && npm run build && pm2 start dist/server.js --name=test-cookies",
+    "start": "pm2 kill && npm run build && pm2 start dist/server.js --name=test-express",
     "launch-browser": "node launch-browser.js",
     "startdev": "pm2 kill && pm2 start dist/server.js --watch --name=test-cookies && npm run launch-browser",
-    "restart": "pm2 restart test-cookies",
-    "stop": "pm2 delete test-cookies",
+    "restart": "pm2 restart test-express",
+    "stop": "pm2 delete test-express",
     "lint": "eslint --ext .js, src test/unit/specs",
     "test": "pm2 kill && istanbul cover node_modules/mocha/bin/_mocha test/unit/specs -- --compilers js:babel-register",
     "testwatch": "mocha test/unit/specs --compilers js:babel-register -w",
@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.22.2",
+    "babel-istanbul": "^0.12.1",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-stage-2": "^6.22.0",
     "chai-http": "^3.0.0",
@@ -41,6 +42,8 @@
     "eslint-config-standard": "^6.2.1",
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^2.0.1",
+    "isparta": "^4.0.0",
+    "istanbul": "^1.1.0-alpha.1",
     "istanbul-reporter-shield-badge": "^1.1.3",
     "opn": "^4.0.2",
     "sinon-stub-promise": "^4.0.0"

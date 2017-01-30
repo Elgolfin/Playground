@@ -11,18 +11,20 @@ app.get('/', function (req, res) {
     httpOnly: false,
     signed: true
   })
-  .set('token', 'gfhdgfhdfghgfdhjdfgjd', {
-    httpOnly: false,
-    signed: true
-  })
-  return res.status(200).end('Cookie has been set')
+  return res.status(200).send('Cookie has been set')
+})
+
+app.get('/status/400', function (req, res) {
+  res.sendStatus(400)
 })
 
 app.get('/read', function (req, res) {
   var cookies = new Cookies(req, res, {'keys': keys})
   var email = cookies.get('user.email', {signed: true})
-  var token = cookies.get('token', {signed: true})
-  return res.end('Hello ' + email + '\nYour token is: ' + token)
+  if (email === undefined) {
+    return res.status(400).end()
+  }
+  return res.status(200).send(email)
 })
 
 app.listen(3000, function () {
